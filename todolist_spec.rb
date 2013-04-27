@@ -10,5 +10,22 @@ describe Todolist do
     task = Task.new("Empty Dishwasher")
     expect(task.instruction).to eq("Empty Dishwasher")
   end
+
+  it "allows a task to be added to the list" do
+    list = Todolist.new("Vacations")
+    task = Task.new("Hawaii")
+    list.add_task(task)
+    expect(list.tasks).to eq([task])
+  end
+
+  it "allows multiple tasks to be added to the list" do
+    list = Todolist.new("Vacations")
+    task1 = Task.new("Hawaii")
+    task2 = Task.new("Chicago")
+    list.add_task(task1)
+    list.add_task(task2)
+    expect(list.tasks).to eq([task1, task2])
+  end
 end
 
+  
