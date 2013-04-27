@@ -18,6 +18,10 @@ class Todolist
     @tasks.push(task)
   end
 
+  def remove_task(task)
+    @tasks.delete(task)
+  end
+
   def tasks
     @tasks
   end
