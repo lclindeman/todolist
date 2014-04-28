@@ -4,6 +4,9 @@
 # view the list
 # puts the list in a certain order
 
+
+### comment by rick  delete this 
+
 class Todolist
   def initialize(name)
     @name = name
